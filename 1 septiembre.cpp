@@ -232,7 +232,7 @@ int main(){
 	char opcion,opcionB,opcionO;
 	int n,elementoB,op=0,posicion,ta;
 	float y;
-	cout<<"Ingresar tamaño del arreglo: ";
+	cout<<"Ingresar tamaÃ±o del arreglo: ";
     cin>>n;
     Arreglo A(n), B(n);
 	do{
@@ -377,7 +377,7 @@ int main(){
 					
 					cout<<"Insercion"<<endl;
                     cout<<"Numero de operaciones: "<<B.insercion()<<endl;
-                    y = (((1/4)*pow(ta,2))+((1/4)*(ta))-(1/2));
+                    y = (((0.25)*pow(ta,2))+((0.25)*(ta))-(0.5));
                     cout<<y<<"\n";
                     cout<<"numero de operaciones estimadas: "<< y<<endl; 
                     
@@ -389,12 +389,12 @@ int main(){
                     
                       cout<<"Quicksort"<<endl;
                     cout<<"Numero de operaciones: "<<B.quicksort(0,B.tamanio)<<endl;
-                   // cout<<"numero de operaciones estimadas: "<<(n*((log10(ta))/(log10(2)));<<endl;
+                    cout<<"numero de operaciones estimadas: "<< (n*((log10(ta))/(log10(2)))) <<endl;
                     
                     
                     cout<<"Mergesort"<<endl;
                     cout<<"Numero de operaciones: "<<B.shell()<<endl;
-                    //cout<<"numero de operaciones estimadas: "<<n*((log10(ta))/(log10(2)));<<endl;
+                    cout<<"numero de operaciones estimadas: "<<(n*((log10(ta))/(log10(2)))) <<endl;
                     
                     
                     
