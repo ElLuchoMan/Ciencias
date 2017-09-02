@@ -231,7 +231,7 @@ char menuOrdenamiento(){
 int main(){
 	char opcion,opcionB,opcionO;
 	int n,elementoB,op=0,posicion,ta;
-	float y;
+	int y;
 	cout<<"Ingresar tamaño del arreglo: ";
     cin>>n;
     Arreglo A(n), B(n);
@@ -370,6 +370,7 @@ int main(){
                     break;
                 case't':
                 case'T':
+                
                 	ta=A.tamanio;
                 	cout<<"Burbuja"<<endl;
                     cout<<"Numero de operaciones: "<<B.burbuja()<<endl;
@@ -389,12 +390,16 @@ int main(){
                     
                       cout<<"Quicksort"<<endl;
                     cout<<"Numero de operaciones: "<<B.quicksort(0,B.tamanio)<<endl;
-                    cout<<"numero de operaciones estimadas: "<< (n*((log10(ta))/(log10(2)))) <<endl;
+                    y=(n*((log10(ta))/(log10(2))));
+                    cout<<y<<"\n";
+                    cout<<"numero de operaciones estimadas: "<< y<<endl;
                     
                     
                     cout<<"Mergesort"<<endl;
                     cout<<"Numero de operaciones: "<<B.shell()<<endl;
-                    cout<<"numero de operaciones estimadas: "<<(n*((log10(ta))/(log10(2)))) <<endl;
+                    y=(n*((log10(ta))/(log10(2))));
+                    cout<<y<<"\n";
+                    cout<<"numero de operaciones estimadas: "<< y<<endl;
                     
                     
                     
