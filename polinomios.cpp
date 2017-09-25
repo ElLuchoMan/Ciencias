@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <math.h>
 
 using namespace std;
 
@@ -15,6 +15,7 @@ class Polinomio{
 	Nodo *cab;
 	void agregar(int,float);
 	void ordenar();
+	void duplicar();
 	//Metodos
 	public:
 	Polinomio();
@@ -81,7 +82,6 @@ void Polinomio::Cargar(){
 
 void Polinomio::Mostrar(){
 	Nodo *p=cab;
-	
 	while(p){
 		cout<<p->coeficiente<<"X^"<<p->expo<<"+";
 		p=p->sig;
@@ -89,15 +89,19 @@ void Polinomio::Mostrar(){
 	}
 }
 
-float Polinomio::evaluar(float x){
-Nodo *p=cab;
-float ex,x=0;
-while (p){
-	ex=pow(x,p->expo)*p->coeficiente;
-	x=ex+x;
-	p=p->sig;
-}
-return x;	
+float Polinomio::evaluar(float valor){
+	Nodo *p = cab;
+	float valortermino,valorgen=0;
+	
+	while(p){
+		valortermino=pow(valor, p->expo)* p->coeficiente;
+		valorgen=valortermino + valorgen;
+		p=p->sig;
+		
+	}
+	
+	
+	return valorgen;
 }
 
 char menu(){
@@ -128,7 +132,7 @@ int main(){
 			
 			case 'c':
 			case 'C':
-				cout<<"Ingrese el polinomio; \n";
+				cout<<"Ingrese el polinomio: \n";
 				p.Cargar();
 				break;
 				
@@ -140,10 +144,11 @@ int main(){
 				
 			case 'e':
 			case 'E':
-				float x;
-				cout<<"Digite el valor con el que desea evaluar el polinomio: \n";
-				cin>>x;
-				cout<<"\n El polinomio evaluado en "<<x<<" es igual a "<<p.evaluar(x);
+				float valor;
+				cout<<"\n Digite el valor de X= ";
+				cin>>valor;
+				
+				cout<<"\nEl polinomio evaluado es: "<<p.evaluar(valor);
 				break;	
 		}
 	}while(opcion!='T' && opcion!='t');
@@ -152,6 +157,8 @@ int main(){
 	return 1;
 	
 }
+
+
 
 
 
