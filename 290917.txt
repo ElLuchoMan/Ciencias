@@ -1,0 +1,25 @@
+Notación de expresiones algebráicas
+1. Prefijo
+operador operardor1 operador2
++AB
+2.Infijo
+operando 1 operardor operando 2
+A+B
+3.Postfijo
+operando 1 operando 2 operador 
+AB+
+
+
+Infijo 
+A+B*C/2
+Prefijo 
+-+A*BC/D2
+Postfijo
+ABC*+D2/-
+
+Infijo
+B*(A+B)-F%D
+Prefijo
+-*B+AB%FD
+Postfijo
+BAB+*FD%-
