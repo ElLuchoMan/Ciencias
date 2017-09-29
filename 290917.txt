@@ -1,4 +1,4 @@
-NotaciÛn de expresiones algebr·icas
+Notaci√≥n de expresiones algebr√°icas
 1. Prefijo
 operador operardor1 operador2
 +AB
@@ -23,3 +23,29 @@ Prefijo
 -*B+AB%FD
 Postfijo
 BAB+*FD%-
+
+
+
+identificador: 0. variable
+	      1.Constante
+	      2. Operador
+
+Evaluar (Expresion)
+p<- Expresion cab
+DD idificador (P.elemento)
+0: Pila.Agregar(valor(P.elemento)
+1:Pila.Agregar(valor(P.elemento)
+2:op2=pila.eliminar()
+op1=Pila.eliminar()
+DD P.elemento
+'*' : r<- op1*op2
+'+' : r<-op1+op2
+'/' : .r<- op1/op2
+'-' : r<- op1-op2
+'%' : r<-op1%op2
++DD 
+pila.agregar(r)
+FDD<-P.sig
+fin mientras
+return pila.eliminar()
+fin evaluar 
